@@ -4,7 +4,7 @@ define('HA_CONFIG', '/config/hotspot_wifi'); // ArminasTV
 define('RASPI_CONFIG', HA_CONFIG.'/raspap'); // ArminasTV
 define('RASPI_CONFIG_NETWORK', RASPI_CONFIG.'/networking/defaults.json');
 define('RASPI_ADMIN_DETAILS', RASPI_CONFIG.'/raspap.auth');
-define('RASPI_WIFI_AP_INTERFACE', 'wlan0');
+define('RASPI_WIFI_AP_INTERFACE', 'wlo1');
 define('RASPI_CACHE_PATH', sys_get_temp_dir() . '/raspap'); 
 
 // Constants for configuration file paths.
