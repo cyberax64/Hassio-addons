@@ -9,18 +9,9 @@ RUN apt-get update
 RUN apt-get install -y software-properties-common 
 RUN add-apt-repository ppa:ondrej/php
 RUN apt-get install -y git iptables iproute2 iw wpasupplicant net-tools
-RUN apt-get install -y hostapd qrencode dnsmasq lighttpd vnstat
-RUN apt-get install -y dhcpcd5
-RUN apt-get install -y php*-cgi
+RUN apt-get install -y hostapd dnsmasq
 
-RUN rm -Rf /var/www/html
-RUN git clone --branch 2.6.2 https://github.com/RaspAP/raspap-webgui /var/www/html 
- 
 COPY /rootfs / 
-# TODO wpa_supplicant -Dnl80211 -i wlo1 -c/etc/wpa_supplicant/wpa_supplicant.conf
-
-RUN cp /var/www/html/config/50-raspap-router.conf /etc/lighttpd/conf-available
-RUN ln -s /etc/lighttpd/conf-available/50-raspap-router.conf /etc/lighttpd/conf-enabled/50-raspap-router.conf
 
 # Build arguments
 ARG BUILD_ARCH
@@ -44,5 +35,5 @@ LABEL \
     org.label-schema.usage="https://github.com/cyberax64/Hassio-addons/tree/master/hotspot_wifi/tree/master/README.md" \
     org.label-schema.vcs-ref=${BUILD_REF} \
     org.label-schema.vcs-url="https://github.com/cyberax64/Hassio-addons/tree/master/hotspot_wifi" \
-    org.label-schema.vendor="ArminasTV"
+    org.label-schema.vendor="elodie Elizalde"
 
