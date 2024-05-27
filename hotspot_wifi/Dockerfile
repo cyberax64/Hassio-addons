@@ -11,13 +11,13 @@ RUN add-apt-repository ppa:ondrej/php
 RUN apt-get install -y git iptables iproute2 iw wpasupplicant net-tools
 RUN apt-get install -y hostapd qrencode dnsmasq lighttpd vnstat
 RUN apt-get install -y dhcpcd5
-RUN apt-get install -y php7.3-cgi
+RUN apt-get install -y php-cgi
 
 RUN rm -Rf /var/www/html
 RUN git clone --branch 2.6.2 https://github.com/RaspAP/raspap-webgui /var/www/html 
  
 COPY /rootfs / 
-# TODO wpa_supplicant -Dnl80211 -i wlan0 -c/etc/wpa_supplicant/wpa_supplicant.conf
+# TODO wpa_supplicant -Dnl80211 -i wlo1 -c/etc/wpa_supplicant/wpa_supplicant.conf
 
 RUN cp /var/www/html/config/50-raspap-router.conf /etc/lighttpd/conf-available
 RUN ln -s /etc/lighttpd/conf-available/50-raspap-router.conf /etc/lighttpd/conf-enabled/50-raspap-router.conf
