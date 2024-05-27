@@ -1,5 +1,5 @@
 {
-	"name": "Hotspot WiFi pour Home Assistant 2",
+	"name": "Hotspot WiFi pour Home Assistant",
 	"version": "dev",
 	"slug": "hotspot_wifi", 
 	"description": "Addon Hotspot WiFi pour Home Assistant",
