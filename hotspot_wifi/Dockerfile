@@ -8,8 +8,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apt-get update
 RUN apt-get install -y software-properties-common 
 RUN add-apt-repository ppa:ondrej/php
-RUN apt-get install -y git iptables iproute2 iw wpasupplicant net-tools
-RUN apt-get install -y hostapd dnsmasq
+RUN apt-get install -y iptables iproute2 iw net-tools hostapd dnsmasq
 
 COPY /rootfs / 
 
