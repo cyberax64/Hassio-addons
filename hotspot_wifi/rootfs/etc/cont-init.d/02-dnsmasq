@@ -1,0 +1,11 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Home Assistant Community Add-on: Pi-hole
+# Runs the dnsmasq 
+# ==============================================================================
+DIR="/config/hotspot_wifi"
+CONFIG="${DIR}/dnsmasq/dnsmasq.conf" 
+
+# Run dnsmasq
+bashio::log.info "Starting dnsmasq..." 
+dnsmasq -C "${CONFIG}"
