@@ -10,4 +10,4 @@ CONFIG="${DIR}/hostapd/hostapd.conf"
 
 # Run dnsmasq
 bashio::log.info "Starting hostapd..."
-hostapd -d -B -i wlan0 ${CONFIG} -f /tmp/hostapd.log
+hostapd -d -B -i wlo1 ${CONFIG} -f /tmp/hostapd.log
