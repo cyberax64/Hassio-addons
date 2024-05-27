@@ -1,9 +1,9 @@
 {
-    "name": "Hotspot wifi pour Home Assistant",
+    "name": "Hotspot WiFi pour Home Assistant",
     "version": "dev",
     "slug": "hotspot_wifi", 
-    "description": "Addon Hotspot wifi with raspap-webgui",
-    "url": "https://github.com/ArminasTV/Hassio-addons/tree/master/hotspot_wifi",
+    "description": "Addon Hotspot WiFi pour Home Assistant",
+    "url": "https://github.com/cyberax64/Hassio-addons/tree/master/hotspot_wifi",
     "webui": "[PROTO:ssl]://[HOST]:[PORT:80]",
     "startup": "application",
     "arch": ["armv7","amd64"],
