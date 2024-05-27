@@ -12,9 +12,14 @@ DIR="/config/hotspot_wifi"
 
 # Ensure configuration exists
 if ! bashio::fs.directory_exists "${DIR}"; then
-    bashio::log.info "Création du répertoire" 
-    mkdir -p "${DIR}/hostapd" || bashio::exit.nok "Failed to create hostapd configuration directory" 
-    mkdir -p "${DIR}/dnsmasq" || bashio::exit.nok "Failed to create dnsmasq configuration directory" 
+    bashio::log.info "Création du répertoire"
+    mkdir -p "${DIR}/hostapd" || bashio::exit.nok "Failed to create hostapd configuration directory"
+    mkdir -p "${DIR}/dnsmasq" || bashio::exit.nok "Failed to create dnsmasq configuration directory"
+
+    #### hostapd
+	bashio::log.info "MV de ${DIR}/hostapd/hostapd.conf"
+    mv /etc/hostapd.conf "${DIR}/hostapd/hostapd.conf"
+    mv /etc/hostapd/hostapd.conf "${DIR}/hostapd/hostapd.conf"
 fi
 
 echo '' > /tmp/hostapd.log
