@@ -17,8 +17,7 @@ if ! bashio::fs.directory_exists "${DIR}"; then
     mkdir -p "${DIR}/dnsmasq" || bashio::exit.nok "Failed to create dnsmasq configuration directory"
 
     #### hostapd
-	bashio::log.info "MV de ${DIR}/hostapd/hostapd.conf"
-    mv /etc/hostapd.conf "${DIR}/hostapd/hostapd.conf"
+    bashio::log.info "MV de ${DIR}/hostapd/hostapd.conf"
     mv /etc/hostapd/hostapd.conf "${DIR}/hostapd/hostapd.conf"
 fi
 
