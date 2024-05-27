@@ -6,7 +6,7 @@
     "url": "https://github.com/cyberax64/Hassio-addons/tree/master/hotspot_wifi",
     "webui": "[PROTO:ssl]://[HOST]:[PORT:80]",
     "startup": "application",
-    "arch": ["armv7","amd64"],
+    "arch": ["armv7","amd64","i386"],
     "map": ["config:rw"],
     "ports": { 
       "80/tcp": 80
@@ -21,8 +21,7 @@
     "auth_api": true, 
     "privileged": ["NET_ADMIN"], 
 	"full_access": true,
- 
-    "options": { 
+     "options": { 
     },
     "schema": { 
     }
