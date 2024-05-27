@@ -4,15 +4,12 @@
     "slug": "hotspot_wifi", 
     "description": "Addon Hotspot WiFi pour Home Assistant",
     "url": "https://github.com/cyberax64/Hassio-addons/tree/master/hotspot_wifi",
-    "webui": "[PROTO:ssl]://[HOST]:[PORT:80]",
     "startup": "application",
     "arch": ["armv7","amd64","i386"],
     "map": ["config:rw"],
     "ports": { 
-      "80/tcp": 80
     },
     "ports_description": { 
-      "80/tcp": "Web interface" 
     },
     "boot": "manual",
     "host_network": true,
